@@ -11,8 +11,8 @@ public class UserCreationServiceImpl implements UserCreationService {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private ActivationSenderService activationSenderService;
+//    @Autowired
+//    private ActivationSenderService activationSenderService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -20,12 +20,12 @@ public class UserCreationServiceImpl implements UserCreationService {
     @Override
     public void create(User user) {
         userService.save(prepareUser(user));
-        activationSenderService.sendActivationCode(user);
+//        activationSenderService.sendActivationCode(user);
     }
 
     private User prepareUser(User user) {
         user.setPassword(getEncodedPassword(user.getPassword()));
-        user.setActive(false);
+        user.setActive(true);
         return user;
     }
 

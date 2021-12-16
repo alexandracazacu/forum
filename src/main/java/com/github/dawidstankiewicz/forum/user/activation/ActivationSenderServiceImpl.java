@@ -7,19 +7,19 @@ import com.github.dawidstankiewicz.forum.user.email.SenderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class ActivationSenderServiceImpl implements ActivationSenderService {
 
-    @Autowired
+//    @Autowired
     private ActivationCodeRepository repository;
 
-    @Autowired
+//    @Autowired
     private SenderService senderService;
 
-    @Autowired
+//    @Autowired
     private ActivationCodeGenerator activationCodeGenerator;
 
-    @Autowired
+//    @Autowired
     private ActivationMessageGenerator activationMessageGenerator;
 
     private ActivationCode activationCode;

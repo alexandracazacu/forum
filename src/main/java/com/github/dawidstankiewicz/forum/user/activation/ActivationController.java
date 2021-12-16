@@ -14,21 +14,21 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 
-@Controller
+//@Controller
 public class ActivationController {
 
-    @Autowired
+//    @Autowired
     private ActivationService activationService;
 
-    @RequestMapping(value = "/users/{username}/activation")
+//    @RequestMapping(value = "/users/{username}/activation")
     public String activateUserAndRedirectToLoginPage(@PathVariable String username,
         @RequestParam String id) {
         activationService.activate(username, id);
         return "activation_success";
     }
 
-    @ExceptionHandler(ForumException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ExceptionHandler(ForumException.class)
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ModelAndView handleActivationError(
         HttpServletRequest request,
         ForumException exception) {
