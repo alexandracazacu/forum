@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public abstract class UnitsTestCase {
 
     @Test
-    public void testConfig() {
+    public void testConfig () {
         return;
     }
 }
